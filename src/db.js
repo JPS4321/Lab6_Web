@@ -12,15 +12,14 @@ export async function getAllBlogs() {
 }
 
 export async function GetPostID(id) {
-    try{
+    try {
         console.log(id)
-        const [rows] = await conn.query("SELECT * FROM blogs WHERE id = ${id}")
-        return rows
-    }catch(e){
-        console.log(e)
-        return e
+        const [rows] = await conn.query(`SELECT * FROM blogs WHERE id = ${id}`);
+        return rows;
+    } catch (e) {
+        console.log(e);
+        return e;
     }
-
 }
 
 

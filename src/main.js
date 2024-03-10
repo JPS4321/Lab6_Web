@@ -1,11 +1,12 @@
 import express from 'express';
+import fs from 'fs'; 
 import { getAllBlogs, createBlog, deleteBlog, GetPostID, putpost } from './db.js';
 
 const app = express();
 const port = 3000;
 app.use(express.json());
-
-
+app.use(express.json());
+app.use(cors());
 
 app.use((req, res, next) => {
   const { method, url, body } = req;
@@ -19,6 +20,10 @@ app.use((req, res, next) => {
     originalSend.apply(res, arguments);
   };
   next();
+});
+
+app.get('/', (req, res) => {
+  res.send('Prueba API');
 });
 
 function validateBlogRequest(req, res, next) {
@@ -44,7 +49,7 @@ app.get('/blogs/:id', async (req, res) => {
     const id = req.params.id;
     const blog = await GetPostID(id);
     if (blog.length === 0) {
-      return res.status(404).send('Blog not found');
+      return res.status(404).send('Post not found');
     }
     res.json(blog);
   } catch (e) {
@@ -64,15 +69,16 @@ app.post('/blogs', validateBlogRequest, async (req, res) => {
   }
 });
 
+
 app.put('/blogs/:id', validateBlogRequest, async (req, res) => {
   try {
     const id = req.params.id;
     const { title, content } = req.body;
     const result = await putpost(id, title, content);
     if (result.affectedRows === 0) {
-      return res.status(404).send('Blog not found');
+      return res.status(404).send('Post not found');
     }
-    res.send('Blog updated successfully');
+    res.send('Post updated successfully');
   } catch (e) {
     console.error(e);
     res.status(500).send('Internal Server Error');
@@ -84,25 +90,13 @@ app.delete('/blogs/:id', async (req, res) => {
     const id = req.params.id;
     const result = await deleteBlog(id);
     if (result.affectedRows === 0) {
-      return res.status(404).send('Blog not found');
+      return res.status(404).send('Post not found');
     }
-    res.send('Blog deleted successfully');
+    res.send('Post deleted successfully');
   } catch (e) {
     console.error(e);
     res.status(500).send('Internal Server Error');
   }
-});
-
-app.use((req, res, next) => {
-  const { method, url } = req;
-  if (!['/blogs', '/blogs/:id'].includes(url) || !['GET', 'POST', 'PUT', 'DELETE'].includes(method)) {
-    return res.status(400).send('Bad Request: Endpoint does not exist or method not allowed.');
-  }
-  next();
-});
-
-app.use((req, res) => {
-  res.status(501).send('Not Implemented');
 });
 
 app.listen(port, () => {

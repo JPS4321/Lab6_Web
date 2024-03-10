@@ -1,0 +1,33 @@
+Timestamp: 2024-03-10T03:34:26.990Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:34:27.150Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:38:42.996Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:38:43.053Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:38:43.583Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:38:43.636Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:38:43.805Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:38:43.865Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:39:38.631Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:39:38.763Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:40:58.287Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:40:58.431Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:41:01.925Z, Method: GET, URL: /getAllBlogs, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:41:01.978Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:41:19.690Z, Method: GET, URL: /getAllBlogs%7B, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T03:41:19.743Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:46:33.325Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:46:33.476Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:46:41.445Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:53:43.545Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:53:43.684Z, Method: GET, URL: /favicon.ico, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:53:49.452Z, Method: GET, URL: /, Request Body: {}, Response: Bad Request: Endpoint does not exist or method not allowed.
+Timestamp: 2024-03-10T04:58:01.680Z, Method: GET, URL: /, Request Body: {}, Response: Welcome to the Blog API!
+Timestamp: 2024-03-10T04:58:01.981Z, Method: GET, URL: /, Request Body: {}, Response: Welcome to the Blog API!
+Timestamp: 2024-03-10T04:58:07.920Z, Method: GET, URL: /, Request Body: {}, Response: Welcome to the Blog API!
+Timestamp: 2024-03-10T05:05:28.654Z, Method: GET, URL: /, Request Body: {}, Response: Prueba API
+Timestamp: 2024-03-10T05:08:23.928Z, Method: GET, URL: /blogs, Request Body: {}, Response: [{"id":1,"title":"Mario kart","content":"Es un juego"}]
+Timestamp: 2024-03-10T05:08:55.389Z, Method: POST, URL: /blogs?=Zelda, Request Body: {}, Response: Bad Request: Title and content are required.
+Timestamp: 2024-03-10T05:09:04.231Z, Method: GET, URL: /blogs?=Zelda, Request Body: {}, Response: [{"id":1,"title":"Mario kart","content":"Es un juego"}]
+Timestamp: 2024-03-10T05:09:11.276Z, Method: POST, URL: /blogs?=Zelda, Request Body: {}, Response: Bad Request: Title and content are required.
+Timestamp: 2024-03-10T05:11:41.927Z, Method: GET, URL: /blogs?=Zelda, Request Body: {"title":"Zelda","content":"Es un buen juego"}, Response: [{"id":1,"title":"Mario kart","content":"Es un juego"}]
+Timestamp: 2024-03-10T05:12:02.430Z, Method: POST, URL: /blogs?=Zelda, Request Body: {"title":"Zelda","content":"Es un buen juego"}, Response: {"fieldCount":0,"affectedRows":1,"insertId":3,"info":"","serverStatus":2,"warningStatus":0,"changedRows":0}
+Timestamp: 2024-03-10T05:12:11.694Z, Method: GET, URL: /blogs?=Zelda, Request Body: {"title":"Zelda","content":"Es un buen juego"}, Response: [{"id":1,"title":"Mario kart","content":"Es un juego"},{"id":3,"title":"Zelda","content":"Es un buen juego"}]
