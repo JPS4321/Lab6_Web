@@ -1,0 +1,16 @@
+{
+  "name": "mysql_document",
+  "version": "1.0.0",
+  "description": "Blog",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "jp",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "mysql2": "^3.9.2"
+  },
+  "type": "module"
+}

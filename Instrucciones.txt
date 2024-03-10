@@ -1,0 +1,5 @@
+docker build -t mysql_imgjp .
+
+docker run --name mysql_container -d -p 33068:3306 mysql_imgjp
+
+Contraseña: c7cf00471fda0e9be9aaa93fce0a6a93732a17e71f5fdcacb83aa42eaab3b5a9
